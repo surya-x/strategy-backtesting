@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "algorithmic-trading"
+version = "0.1.0"
+description = ""
+authors = ["vsuryakumar <kumarsurya.2001@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.26.3"
+pandas = "^2.1.4"
+requests = "^2.31.0"
+xlsxwriter = "^3.1.9"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
