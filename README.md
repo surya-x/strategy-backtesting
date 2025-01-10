@@ -34,17 +34,17 @@ To get started with this project, follow these steps:
    Start the Jupyter Notebook server:
 
    ```bash
-   poetry run jupyter notebook
+   poetry run jupyter-lab
    ```
 
-   Open `main.ipynb` to explore and execute the backtesting framework.
+   Open `strategy1.ipynb`, `strategy2.ipynb` to explore and execute the backtesting framework.
 
 ## Repository Structure
 
 - `.github/workflows/`: GitHub Actions workflows for CI/CD.
 - `algorithmic_trading/`: Scripts and modules related to trading algorithms.
 - `data/`: Directory designated for historical market data files.
-- `main.ipynb`: Jupyter Notebook for interactive backtesting.
+- `strategy1.ipynb`, `strategy2.ipynb`: Jupyter Notebook for interactive backtesting.
 - `poetry.lock` & `pyproject.toml`: Files for dependency management using Poetry.
 
 ## Use Case: Backtesting Equity Strategies
