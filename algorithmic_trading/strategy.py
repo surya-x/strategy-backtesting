@@ -8,15 +8,17 @@ class MyStrategy:
         self.df['Return'] = self.df.Close / self.df.Close.shift(1)
         self.df.loc[df.index[0], 'Return'] = 1.0
 
-    def run(self, close_pct_threshold=20, range_value=10, STARTING_BALANCE=10000):
-        self.START_BAL = STARTING_BALANCE
-        self.close_pct_threshold = close_pct_threshold
-        self.range_value = range_value
+    def run(self, strategy_pre_build, signal, **kwargs):
+        self.START_BAL = 1000
+        # self.close_pct_threshold = close_pct_threshold
+        # self.range_value = range_value
 
         self.build_for_benchmark()
-        self.build_for_strategy()
+        # self.build_for_strategy()
+        strategy_pre_build(self)
 
-        self.simulate_strategy_for_params(self.df, close_pct_threshold, range_value, True)
+        # self.simulate_strategy_for_params(self.df, close_pct_threshold, range_value, True)
+        signal(self, **kwargs)
 
     def stats(self):
         trades, days_in_market = self._get_trades_and_exposure()
@@ -25,8 +27,8 @@ class MyStrategy:
         _s_return = self.df.Sys_bal.iloc[-1]
 
         stats = {
-            'close_pct_threshold': self.close_pct_threshold,
-            'range_value': self.range_value,
+            # 'close_pct_threshold': self.close_pct_threshold,
+            # 'range_value': self.range_value,
             'Total Days': len(self.df.Long),
             'Market Exposure': round((days_in_market / len(self.df.Long)) * 100, 2),
             '# of Trades': trades,
