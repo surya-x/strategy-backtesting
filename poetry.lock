@@ -2730,19 +2730,6 @@ optional = ["python-socks", "wsaccel"]
 test = ["websockets"]
 
 [[package]]
-name = "xlsxwriter"
-version = "3.1.9"
-description = "A Python module for creating Excel XLSX files."
-optional = false
-python-versions = ">=3.6"
-groups = ["main"]
-markers = "python_version <= \"3.11\" or python_version >= \"3.12\""
-files = [
-    {file = "XlsxWriter-3.1.9-py3-none-any.whl", hash = "sha256:b61c1a0c786f82644936c0936ec96ee96cd3afb9440094232f7faef9b38689f0"},
-    {file = "XlsxWriter-3.1.9.tar.gz", hash = "sha256:de810bf328c6a4550f4ffd6b0b34972aeb7ffcf40f3d285a0413734f9b63a929"},
-]
-
-[[package]]
 name = "yfinance"
 version = "0.2.51"
 description = "Download market data from Yahoo! Finance API"
@@ -2792,4 +2779,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "bdd346258238861c21fddb8ee6c298c7bdde2a2fbab7c5cb4a58e33d8adc95d3"
+content-hash = "c24564c3470533f6552e7bbce9a2f8a8c5042d18f9b8ad93e1b8d7874027c7ad"
